@@ -134,16 +134,22 @@ async def _generate_stream(contents: Union[str, List[Union[str, types.Part]]], r
     
     try:
         # Configure Gemini with personalized system instruction if provided
-        generation_config = types.GenerateContentConfig(
-            system_instruction=personalized_system or system_instruction,
+        tools = [
+            types.Tool(url_context=types.UrlContext()),
+        ]
+        generate_content_config = types.GenerateContentConfig(
+            system_instruction=personalized_system,
+            thinking_config = types.ThinkingConfig(
+                thinking_budget=0,
+            ),
+            tools = tools,
             # thinking_config=types.ThinkingConfig(thinking_budget=0)
         )
-        
         # Stream response from Gemini
         for chunk in client.models.generate_content_stream(
             model=model_name,
             contents=contents,
-            config=generation_config,
+            config=generate_content_config,
         ):
             if await request.is_disconnected():
                 logger.info("Client disconnected")

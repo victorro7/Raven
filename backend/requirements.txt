@@ -33,7 +33,7 @@ google-cloud-core==2.4.1
 google-cloud-resource-manager==1.14.1
 google-cloud-storage==2.19.0
 google-crc32c==1.6.0
-google-genai==1.2.0
+google-genai
 google-resumable-media==2.7.2
 googleapis-common-protos==1.67.0
 grpc-google-iam-v1==0.14.0
