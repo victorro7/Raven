@@ -4,11 +4,7 @@
 
 Raven is a sophisticated AI conversational platform that delivers ChatGPT-level intelligence through real-time streaming responses and multimodal interactions. Built for both consumer and enterprise markets, it showcases advanced full-stack development with cutting-edge AI integration.
 
-## 🎯 Live Demo
-
-**Website:** [https://useraven.app](https://useraven.app)
-
-<!-- > ⚠️ **Currently under maintenance** -->
+<!-- > **Website:** [https://useraven.app](https://useraven.app) ⚠️ **Currently under maintenance** -->
 
 ## 🖼️ Application Showcase
 
